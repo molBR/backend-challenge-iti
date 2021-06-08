@@ -9,6 +9,7 @@ public class ErrorDto {
     public ErrorDto(List<String> listOfError, String error){
         this.listOfError = listOfError;
         this.error = error;
+        this.isValidPassword = false;
     }
 
     @JsonProperty("list_of_errors")
@@ -16,5 +17,8 @@ public class ErrorDto {
 
     @JsonProperty("error_message")
     String error;
+
+    @JsonProperty("isPasswordValid")
+    private boolean isValidPassword;
 
 }
