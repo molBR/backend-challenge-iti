@@ -1,8 +1,8 @@
 package app.core.service.usecases.rules.AbstractRules;
 
-import app.core.service.usecases.rules.Rule;
+import app.core.service.usecases.rules.RuleImpl;
 
-public class HaveCharMaxRuleImpl extends Rule implements RuleInterface {
+public class HaveCharMaxAbstractRuleImpl extends RuleImpl implements AbstractRule {
 
     private final String lettersMax = "ABCDEFGHIJKLMNOPQRSTUVWYZ";
 

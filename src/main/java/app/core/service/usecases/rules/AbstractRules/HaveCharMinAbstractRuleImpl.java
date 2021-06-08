@@ -1,8 +1,8 @@
 package app.core.service.usecases.rules.AbstractRules;
 
-import app.core.service.usecases.rules.Rule;
+import app.core.service.usecases.rules.RuleImpl;
 
-public class HaveCharMinRuleImpl extends Rule implements RuleInterface {
+public class HaveCharMinAbstractRuleImpl extends RuleImpl implements AbstractRule {
 
     private final String lettersMin = "abcdefghijklmnopqrstuvwxyz";
 

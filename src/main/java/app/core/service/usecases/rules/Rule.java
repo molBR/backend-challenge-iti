@@ -1,12 +1,10 @@
 package app.core.service.usecases.rules;
 
-public class Rule {
+import app.core.service.usecases.rules.AbstractRules.*;
 
-    protected boolean flag = false;
+import java.util.ArrayList;
 
-    public boolean compareString(char p, String letters){
-        return letters.indexOf(p) != -1;
-    }
+public interface Rule {
 
-
+    public boolean getFlag ();
 }

@@ -1,8 +1,8 @@
 package app.core.service.usecases.rules.AbstractRules;
 
-import app.core.service.usecases.rules.Rule;
+import app.core.service.usecases.rules.RuleImpl;
 
-public class HaveDigitsRuleImpl extends Rule implements RuleInterface {
+public class HaveDigitsAbstractRuleImpl extends RuleImpl implements AbstractRule {
     private final String digits = "123456789";
 
     @Override
