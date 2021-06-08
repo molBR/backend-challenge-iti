@@ -1,5 +1,6 @@
 package app.core.service.usecases;
 
+import app.core.service.usecases.rules.AbstractRules.RuleFactory;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -23,6 +24,7 @@ public class ValidatePasswordUseCase {
     char space = ' ';
 
 
+    RuleFactory ruleFactory = new RuleFactory();
 
     private boolean compareString(char p, String letters) {
         return letters.indexOf(p) != -1;
@@ -39,11 +41,17 @@ public class ValidatePasswordUseCase {
         String getCharRepeated = "";
         for (int i = 0; i < password.length(); i++) {
             char c = password.charAt(i);
+            ruleFactory.getRuleInterfaces().forEach(r ->{
+                if(r.getFlag()){
+                    r.validateRule(c);
+                }
+            });
+/*
             if(!haveCharMax) haveCharMax = compareString(c, lettersMax);
             if(!haveCharMin) haveCharMin = compareString(c, lettersMin);
             if(!haveDigits) haveDigits = compareString(c, digits);
             if(!haveSpecialChar) haveSpecialChar = compareString(c, specialChar);
-
+*/
             String result = password.substring(0, i) + password.substring(i+1); //return char from index.
             if(compareString(c,result)) repeatedChar = false;
         }
