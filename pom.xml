@@ -45,6 +45,7 @@
             <artifactId>pitest-parent</artifactId>
             <version>1.4.9</version>
             <type>pom</type>
+
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -64,6 +65,9 @@
                 <artifactId>pitest-maven</artifactId>
                 <version>1.4.9</version>
                 <configuration>
+                    <avoidCallsTo>
+                        <avoidCallsTo>java.util.ArrayList</avoidCallsTo>
+                    </avoidCallsTo>
                 </configuration>
                 <dependencies>
                     <dependency>

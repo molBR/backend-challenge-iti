@@ -81,7 +81,9 @@ Foi pressuposto que o tamanho máximo da senha é de 256 caracteres, porém, ana
 letras maiúsculas, minúsculas, caracteres especiais e dígitos. O maior tamanho que uma senha genuína possa ter é de: 74.
 26 letras maísculas, 26 letras minúsculas, 10 dígitos e 12 caracteres especiais.
 
-<b>Importante</b> notar que da forma que este arquivo está muito sensível à entropia, ou seja, caso seja adcionado novas o processo será custoso e cada nova regra tornará a manutenção do código mais moroso. Uma outra alternativa seria fazer o processo de <i>strategy</i> (https://refactoring.guru/pt-br/design-patterns/strategy). Tal concepção só foi feita após finalização do projeto e não houve tempo hábil para a implementação do mesmo. Todavia, é importante notar o débito técnico.
+### Abstração das regras
+
+A fim de deixar as regras desacopladas e dinâmicas para que, caso existam novas regras, seja fácil dar manutenção no código, foi utilizado duas abtrações de regras utilizando. Cada regra a ser implementada foi gerado um novo arquivo que abstrai de uma interface chamada `rule`
 
 Existe um work in progress na branch `feature/refactoringRules` que implementa algumas estratégias unidos à um factory.
 
@@ -109,6 +111,12 @@ por testes unitários que garantem a integridade do código desenvolvido.
 
 Para executar os testes: ```mvn test```
 
+Foi criado um total de 32 testes, sendo destes 30 unitários e 2 integrativos.
+
+
+![Tests](/images/testResults.png)
+
+
 Ainda para garantir a qualidade dos testes desenvolvidos, está integrado o PI TEST
 plugin responsável pelos testes mutantes.
 
@@ -122,14 +130,7 @@ O último relatório criado está da seguinte forma:
 
 ![Report](/images/pireport.png)
 
-As linhas não contempladas são devido à mutantes que sobreviveram aos testes porém não comprometem a integridade do código.
-Logo, foi escolhido, por hora, ignorá-los.
-
-### To do
-
-- Logs
-
-- Melhorar tests de mutação
+Todos os mutantes foram contemplados, mostrando a alta qualidade dos testes criados. 100% das linhas foram cobertas por testes.
 
 ## Referências
 
