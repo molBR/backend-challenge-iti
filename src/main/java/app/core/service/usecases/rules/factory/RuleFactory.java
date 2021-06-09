@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public interface RuleFactory {
 
 
+    public void createRules();
 
     public ArrayList<AbstractRule> getAbstractRuleInterfaces ();
 

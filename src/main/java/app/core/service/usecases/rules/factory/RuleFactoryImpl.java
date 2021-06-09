@@ -21,11 +21,15 @@ public class RuleFactoryImpl implements RuleFactory {
     private HaveDigitsAbstractRuleImpl haveDigitsAbstractRule;
     private HaveSpecialCharAbstractRuleImpl haveSpecialCharAbstractRule;
 
-
-    public void createRules(){
-
+    protected void clearRules(){
         abstractRuleInterfaces.clear();
         ruleInterfaces.clear();
+    }
+
+    @Override
+    public void createRules(){
+
+        clearRules();
 
         //instanciate rules
 
