@@ -6,6 +6,10 @@ public class HaveSpecialCharAbstractRuleImpl extends RuleImpl implements Abstrac
 
     private final String specialChar = "!@#$%^&*()-+";
 
+    public HaveSpecialCharAbstractRuleImpl(){
+        this.error = "Should have Special Characters";
+    }
+
     @Override
     public boolean getFlag () {
         return this.flag;

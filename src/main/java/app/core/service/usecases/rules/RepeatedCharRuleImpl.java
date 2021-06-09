@@ -4,6 +4,7 @@ public class RepeatedCharRuleImpl extends RuleImpl {
 
     public RepeatedCharRuleImpl(){
         this.flag = true;
+        this.error = "Should not have repeated char";
     }
     public void checkRepeatedChar(char c, String password, int i){
         String result = password.substring(0, i) + password.substring(i+1); //return char from index.

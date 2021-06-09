@@ -6,6 +6,9 @@ public class HaveCharMinAbstractRuleImpl extends RuleImpl implements AbstractRul
 
     private final String lettersMin = "abcdefghijklmnopqrstuvwxyz";
 
+    public HaveCharMinAbstractRuleImpl(){
+        this.error = "Should have minimized letters";
+    }
 
     @Override
     public boolean getFlag () {

@@ -16,6 +16,7 @@ class BuisnessExceptionTest {
         list.add("errrorTest");
         BuisnessException buisnessException = new BuisnessException("error", list);
         assertEquals(list, buisnessException.listOfErrors);
+        assertNotNull(buisnessException.getListOfErrors());
 
     }
 

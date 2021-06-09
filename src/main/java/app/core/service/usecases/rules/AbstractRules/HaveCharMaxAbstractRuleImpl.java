@@ -6,6 +6,9 @@ public class HaveCharMaxAbstractRuleImpl extends RuleImpl implements AbstractRul
 
     private final String lettersMax = "ABCDEFGHIJKLMNOPQRSTUVWYZ";
 
+    public HaveCharMaxAbstractRuleImpl(){
+        this.error = "Should have capital letters";
+    }
     @Override
     public boolean getFlag () {
         return this.flag;

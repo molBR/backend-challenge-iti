@@ -11,14 +11,12 @@ public class ValidatePasswordUseCase {
     char space = ' ';
 
 
-    RuleFactoryImpl ruleFactoryImpl = new RuleFactoryImpl();
+    private RuleFactoryImpl ruleFactoryImpl = new RuleFactoryImpl();;
 
-    private boolean compareString(char p, String letters) {
-        return letters.indexOf(p) != -1;
-    }
 
     public boolean IsValid (String password){
 
+        ruleFactoryImpl.createRules();
 
         ruleFactoryImpl.getSpaceRule().checkSpaceRule(password);
 
@@ -37,8 +35,7 @@ public class ValidatePasswordUseCase {
         return ruleFactoryImpl.getRuleInterfaces().stream().allMatch(val -> val.getFlag());
     }
 
-
-
-
-
+    public RuleFactoryImpl getRuleFactoryImpl() {
+        return ruleFactoryImpl;
+    }
 }

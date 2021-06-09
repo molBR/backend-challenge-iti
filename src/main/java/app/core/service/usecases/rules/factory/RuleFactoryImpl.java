@@ -20,8 +20,9 @@ public class RuleFactoryImpl implements RuleFactory {
     private HaveCharMinAbstractRuleImpl haveCharMinAbstractRule;
     private HaveDigitsAbstractRuleImpl haveDigitsAbstractRule;
     private HaveSpecialCharAbstractRuleImpl haveSpecialCharAbstractRule;
-    public RuleFactoryImpl(){
 
+
+    public void createRules(){
         //instanciate rules
 
         //singular rules
@@ -49,7 +50,6 @@ public class RuleFactoryImpl implements RuleFactory {
         ruleInterfaces.add(haveCharMinAbstractRule);
         ruleInterfaces.add(haveDigitsAbstractRule);
         ruleInterfaces.add((haveSpecialCharAbstractRule));
-
     }
 
     @Override
