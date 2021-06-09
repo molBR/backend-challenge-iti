@@ -23,6 +23,10 @@ public class RuleFactoryImpl implements RuleFactory {
 
 
     public void createRules(){
+
+        abstractRuleInterfaces.clear();
+        ruleInterfaces.clear();
+
         //instanciate rules
 
         //singular rules
