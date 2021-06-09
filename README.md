@@ -83,6 +83,7 @@ letras maiúsculas, minúsculas, caracteres especiais e dígitos. O maior tamanh
 
 <b>Importante</b> notar que da forma que este arquivo está muito sensível à entropia, ou seja, caso seja adcionado novas o processo será custoso e cada nova regra tornará a manutenção do código mais moroso. Uma outra alternativa seria fazer o processo de <i>strategy</i> (https://refactoring.guru/pt-br/design-patterns/strategy). Tal concepção só foi feita após finalização do projeto e não houve tempo hábil para a implementação do mesmo. Todavia, é importante notar o débito técnico.
 
+Existe um work in progress na branch `feature/refactoringRules` que implementa algumas estratégias unidos à um factory.
 
 #### Aplicação REST
 
